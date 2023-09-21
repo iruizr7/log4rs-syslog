@@ -1,12 +1,12 @@
 [package]
-name = "log4rs-syslog"
-description = "Syslog appender for log4rs based on libc's syslog() function (*nix only)"
-version = "3.0.0"
-authors = ["Ivan Mironov <mironov.ivan@gmail.com>"]
+name = "log4rs-syslog2"
+description = "Syslog appender for log4rs based on libc's syslog() function (*nix/macOS only)"
+version = "4.0.0"
+authors = ["Ivan Mironov <mironov.ivan@gmail.com>", "Iñigo R. <iruizr7@gmail.com>"]
 license = "MIT/Apache-2.0"
 keywords = ["logger", "log", "logging", "nix", "syslog"]
 categories = ["os::unix-apis"]
-publish = false
+publish = true
 repository = "https://github.com/im-0/log4rs-syslog"
 documentation = "https://docs.rs/crate/log4rs-syslog"
 readme = "README.md"
@@ -20,16 +20,16 @@ file = ["log/serde", "serde", "serde_derive"]
 unstable = []
 
 [dependencies]
-anyhow = "*"
-bitflags = { version = "*", default_features = false }
-lazy_static = { version = "*", default_features = false }
-libc = { version = "*", default_features = false }
-log = { version = "*", default_features = false }
-log4rs = { version = "*"}
-serde = { version = "*", default_features = false, optional = true }
-serde_derive = { version = "*", default_features = false, optional = true }
+anyhow = "1.0.75"
+bitflags = { version = "2.4.0", default_features = false }
+lazy_static = { version = "1.4.0", default_features = false }
+libc = { version = "0.2.148", default_features = false }
+log = { version = "0.4.20", default_features = false }
+log4rs = { version = "1.2.0"}
+serde = { version = "1.0.188", default_features = false, optional = true }
+serde_derive = { version = "1.0.188", default_features = false, optional = true }
 
 [dev-dependencies]
-glob = { version = "*", default_features = false }
-tempfile = { version = "*", default_features = false }
-which = { version = "*", default_features = false }
+glob = { version = "0.3.1", default_features = false }
+tempfile = { version = "3.8.0", default_features = false }
+which = { version = "4.4.2", default_features = false }
